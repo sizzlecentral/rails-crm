@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get '/contact' => 'contacts#contact'
   get '/contacts' => 'contacts#contacts'
 
+  get '/update_contact/:id' => 'contacts#update_contact'
+  put '/update_contact/:id' => 'contacts#update'
+
   get '/delete_contact/:id' => 'contacts#delete_contact'
   delete '/delete_contact/:id' => 'contacts#destroy'
 

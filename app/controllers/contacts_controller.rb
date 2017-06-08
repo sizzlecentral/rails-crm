@@ -47,6 +47,11 @@ class ContactsController < ApplicationController
     render :search_results
   end
 
+  def update_contact
+    @contact = Contact.find(params[:id])
+    render :update_contact
+  end
+
   def update
     @contact = Contact.find(params[:id])
     if @contact.update_attributes(contact_params)

@@ -246,3 +246,7 @@ input.search {
 form {
     margin-top: -1.5em;
 }
+
+.button a {
+  color: white;
+}
