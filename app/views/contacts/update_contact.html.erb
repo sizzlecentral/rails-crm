@@ -3,18 +3,19 @@
 <br>
 <%= form_for(@contact) do |f| %>
 
-<%= f.label :first_name %><br>
-<%= f.text_field :first_name %>
-<br>
-<%= f.label :last_name %><br>
-<%= f.text_field :last_name %>
-<br>
-<%= f.label :email %><br>
-<%= f.text_field :email %>
-<br>
-<%= f.label :note %><br>
-<%= f.text_field :note %>
-<br>
-<%= f.submit "Edit contact" %>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %>
+  <br>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %>
+  <br>
+  <%= f.label :email %><br>
+  <%= f.text_field :email %>
+  <br>
+  <%= f.label :note %><br>
+  <%= f.text_field :note %>
+  <br>
+  <br>
+  <%= f.submit "Edit contact" %>
 
 <% end %>

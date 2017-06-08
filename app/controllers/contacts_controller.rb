@@ -44,7 +44,12 @@ class ContactsController < ApplicationController
   end
 
   def search_results
-    render :search_results
+    @contacts = Contact.where(:first_name =>params[:first_name])
+    if @contacts.any? == true
+      render :search_results
+    else
+      render :not_found
+    end
   end
 
   def update_contact
