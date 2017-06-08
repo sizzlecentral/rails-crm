@@ -1,10 +1,9 @@
 <h3>Are you sure you want to delete <%= @contact.full_name %>?</h3>
 <br>
 
-<form action="/delete_contact/<%=@contact.id%>" method="post">
-  <input class="delete" type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Yes, please delete">
-</form>
+<div class="button">
+<%= link_to("Yes, please delete", "/contacts/#{@contact.id}", method: :delete) %>
+</div>
 <br>
 <a href="/"><div class="button">No, get me out of here</div></a>
 <br>

@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   get '/contact' => 'contacts#contact'
   get '/contacts' => 'contacts#contacts'
 
-  get '/delete_contact' => 'contacts#delete_contact'
+  get '/delete_contact/:id' => 'contacts#delete_contact'
+  delete '/delete_contact/:id' => 'contacts#destroy'
+
   get '/not_found' => 'contacts#not_found'
   get '/search_results' => 'contacts#search_results'
   get '/update_contact' => 'contacts#update_contact'

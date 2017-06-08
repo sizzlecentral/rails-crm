@@ -36,7 +36,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
-    render :contacts
+    redirect_to contacts_path
   end
 
   def not_found
@@ -48,16 +48,16 @@ class ContactsController < ApplicationController
   end
 
   def update
-    @meme = Meme.find(params[:id])
-    if @meme.update_attributes(meme_params)
-      redirect_to "/memes/#{@meme.id}"
+    @contact = Contact.find(params[:id])
+    if @contact.update_attributes(contact_params)
+      redirect_to "/contacts/#{@contact.id}"
     else
       render :update_contact
     end
   end
 
   def contact_params
-    { first_name: params[:contact][:first_name], last_name: params[:contact][:last_name], email: params[:email], note: params[:note] }
+    { first_name: params[:contact][:first_name], last_name: params[:contact][:last_name], email: params[:contact][:email], note: params[:contact][:note] }
   end
 
 end
