@@ -9,6 +9,25 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <header>
+      <h1><%= @header %></h1>
+    </header>
+
+    <main>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/add_contact">Add a contact</a>
+        <a href="/about">About</a>
+      </nav>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <br>
+      <p>&copy; Don Cooper 2017</p>
+      <br>
+    </footer>
+
   </body>
 </html>
