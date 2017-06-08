@@ -1,0 +1,12 @@
+<ul>
+  <li><span class="smaller">First name:</span>  <%= @contact.first_name %></li>
+  <li><span class="smaller">Last name:</span>  <%= @contact.last_name %></li>
+  <li><span class="smaller">Email:</span>  <%= @contact.email %></li>
+</ul>
+
+<h3>Note:</h3>
+<p><%= @contact.note %></p>
+<br>
+<a href="/update_contact/<%=@contact.id%>"<div class="button_half_left">Edit contact</div></a>
+<a href="/delete_contact/<%=@contact.id%>"<div class="button_half_right">Delete contact</div></a>
+<div style="clear: both;"></div>
